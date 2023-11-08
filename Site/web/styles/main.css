@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+}
+
+.container {
+  width: 100%;
+  height: 1024px;
+  background: rgba(255, 255, 255, 1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.name {
+  color: #fff;
+}
+
+.banner {
+  width: 90%;
+  height: 250px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 181px;
+  left: 120px;
+  border: 4px solid rgba(143, 19, 154, 1);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.caixa1 {
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 1);
+  opacity: 1;
+  position: absolute;
+  top: 631px;
+  left: 190px;
+  border: 4px solid rgba(143, 19, 154, 0.20000000298023224);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0.5620763897895813, 0.07803819328546524, 0.6041666865348816, 0.25);
+  overflow: hidden;
+}
+
+.caixa2 {
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 1);
+  opacity: 1;
+  position: absolute;
+  top: 631px;
+  left: 570px;
+  border: 4px solid rgba(143, 19, 154, 0.20000000298023224);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0.5620763897895813, 0.07803819328546524, 0.6041666865348816, 0.25);
+  overflow: hidden;
+}
+
+.caixa3 {
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 1);
+  opacity: 1;
+  position: absolute;
+  top: 631px;
+  left: 950px;
+  border: 4px solid rgba(143, 19, 154, 0.20000000298023224);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0.5620763897895813, 0.07803819328546524, 0.6041666865348816, 0.25);
+  overflow: hidden;
+}
+
+.background-foto1 {
+  width: 292px;
+  height: 167px;
+  background: rgba(143, 19, 154, 0.20000000298023224);
+  opacity: 1;
+  position: absolute;
+  top: 635px;
+  left: 194px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
+}
+
+.background-foto2 {
+  width: 292px;
+  height: 167px;
+  background: rgba(143, 19, 154, 0.20000000298023224);
+  opacity: 1;
+  position: absolute;
+  top: 635px;
+  left: 574px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
+}
+
+.background-foto3 {
+  width: 292px;
+  height: 167px;
+  background: rgba(143, 19, 154, 0.20000000298023224);
+  opacity: 1;
+  position: absolute;
+  top: 635px;
+  left: 954px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
+}
+
+.tituloGatos {
+  width: 298px;
+  color: rgba(143, 19, 154, 1);
+  position: absolute;
+  top: 546px;
+  left: 120px;
+  font-family: Poppins;
+  font-weight: SemiBold;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+
+.amigável {
+  width: 69px;
+  height: 25px;
+  background: rgba(235, 157, 3, 1);
+  padding: 5px 10px;
+  margin: 10px;
+  opacity: 1;
+  position: absolute;
+  top: 857px;
+  left: 210px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+}
+
+.texto-característica {
+  width: 49px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-family: Poppins;
+  font-weight: SemiBold;
+  font-size: 10px;
+  opacity: 1;
+  text-align: left;
+}
+
+.carinhoso {
+  width: 73px;
+  height: 25px;
+  background: rgba(222, 50, 26, 1);
+  padding: 5px 10px;
+  margin: 10px;
+  opacity: 1;
+  position: absolute;
+  top: 857px;
+  left: 590px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+}
+
+.carinhoso2 {
+  width: 73px;
+  height: 25px;
+  background: rgba(222, 50, 26, 1);
+  padding: 5px 10px;
+  margin: 10px;
+  opacity: 1;
+  position: absolute;
+  top: 857px;
+  left: 970px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+}
+
+.dócil {
+  width: 46px;
+  height: 25px;
+  background: rgba(3, 96, 235, 1);
+  padding: 5px 10px;
+  margin: 10px;
+  opacity: 1;
+  position: absolute;
+  top: 857px;
+  left: 294px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+}
+
+.aventureiro {
+  width: 80px;
+  height: 25px;
+  background: rgba(0, 156, 62, 1);
+  padding: 5px 10px;
+  margin: 10px;
+  opacity: 1;
+  position: absolute;
+  top: 857px;
+  left: 674px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+}
+
+.aventureiro2 {
+  width: 80px;
+  height: 25px;
+  background: rgba(0, 156, 62, 1);
+  padding: 5px 10px;
+  margin: 10px;
+  opacity: 1;
+  position: absolute;
+  top: 857px;
+  left: 1054px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+}
+
+.nomeGato {
+  width: 51px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 817px;
+  left: 210px;
+  font-family: Poppins;
+  font-weight: SemiBold;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+
+.nomeGato2 {
+  width: 72px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 817px;
+  left: 590px;
+  font-family: Poppins;
+  font-weight: SemiBold;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+
+.nomeGato3 {
+  width: 76px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 817px;
+  left: 970px;
+  font-family: Poppins;
+  font-weight: SemiBold;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background: white;
+  position: absolute;
+  top: 10px;
+  left: 80px;
+}
