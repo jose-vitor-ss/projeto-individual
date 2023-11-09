@@ -1,0 +1,16 @@
+.containerLogin{
+  margin-top: 30px;
+  margin-bottom: 0;
+  position: absolute;
+}
+.a2 {
+    text-decoration: none;
+    color: #420048;
+    opacity: 0.3;
+  }
+  
+  .a1 {
+    text-decoration: none;
+    color: rgba(143, 19, 154, 0.8);
+    ;
+  }
