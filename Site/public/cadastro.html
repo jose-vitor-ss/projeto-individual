@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+  <link href="css\template.css" rel="stylesheet" />
+  <link href="css\estilo.css" rel="stylesheet">
+  <link href="css\cadastro.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="assets\Cat icon.png" style="width:90px; height: 90px">
+    </div>
+    <div class="containerOpções">
+      <li>
+        <a class="a2" href="index.html">Home</a>
+      </li>
+      <li>
+        <a class="a2" href="quemSomos.html">Quem Somos</a>
+      </li>
+      <li>
+        <a class="a2" href="dicas.html">Dicas</a>
+      </li>
+      <li>
+        <a class="a2" href="telaAdoção.html">Adote</a>
+      </li>
+      <div class="containerOpções2">
+        <a class="a1" href="cadastro.html" style="color: #8F149A;">
+          Cadastro
+        </a>
+        <a class="a2" href="login.html">
+          <img src="assets\perfil.png" style="width: 30px; height: 30px">
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="login">
+    <div class="alerta_erro">
+      <div class="card_erro" id="cardErro">
+        <span id="mensagem_erro"></span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card card-cadastro">
+        <h2>Bem-vindo!</h2>
+        <div class="formulario">
+          <div class="campo">
+          </div>
+          <div class="campo">
+            <span>Nome:</span>
+            <input id="nome_input" type="text" placeholder="Seu nome" />
+          </div>
+          <div class="campo">
+            <span>CPF:</span>
+            <input id="cpf_input" type="text" placeholder="CPF" />
+          </div>
+          <div class="campo">
+            <span>E-mail:</span>
+            <input id="email_input" type="text" placeholder="e-mail" />
+          </div>
+          <div class="campo">
+            <span>Senha:</span>
+            <input id="senha_input" type="password" placeholder="******" />
+          </div>
+          <div class="campo">
+            <span>Confirmação da Senha:</span>
+            <input id="confirmacao_senha_input" type="password" placeholder="******" />
+          </div>
+          <button class="botao" onclick="cadastrar()">Cadastrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </header>
+
+  <footer>
+    <div class="container2">
+      <div class="containerItens">
+        <div class="imagens">
+          <img src="assets\facebook.png" width="50px" height="50">
+          <img src="assets\Instagram.png" width="50px" height="50">
+          <img src="assets\Twitter.png" width="50px" height="50">
+        </div>
+        <div>
+          <b>Fale conosco: AdoteUmFelpudo@gmail.com</b>
+        </div>
+      </div>
+  </footer>
+</body>
+
+<script>
+  function cadastrar() {
+    // aguardar();
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = nome_input.value;
+    var emailVar = email_input.value;
+    var cpfVar = cpf_input.value;
+    var senhaVar = senha_input.value;
+    var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+    if (
+      nomeVar == "" ||
+      emailVar == "" ||
+      cpfVar == "" ||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == ""
+    ) {
+      // cardErro.style.display = "block";
+      // mensagem_erro.innerHTML =
+      //   "(Mensagem de erro para todos os campos em branco)";
+
+      //   finalizarAguardar();
+      return false; }
+      // } else {
+      //   setInterval(sumirMensagem, 5000);
+      // }
+
+      // Enviando o valor da nova input
+      fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          nomeServer: nomeVar,
+          cpfServer: cpfVar,
+          emailServer: emailVar,
+          senhaServer: senhaVar
+        }),
+      })
+        .then(function (resposta) {
+          console.log("resposta: ", resposta);
+
+          if (resposta.ok) {
+            //   cardErro.style.display = "block";
+
+            //   mensagem_erro.innerHTML =
+            //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+            setTimeout(() => {
+              window.location = "login.html";
+            }, "2000");
+
+            // limparFormulario();
+            // finalizarAguardar();
+          } else {
+            throw "Houve um erro ao tentar realizar o cadastro!";
+          }
+        })
+        .catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+          // finalizarAguardar();
+        });
+
+      return false;
+    }
+</script>
