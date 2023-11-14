@@ -7,9 +7,10 @@
 }
 
 .bannerQuemSomos {
-  height: 200px;
+  height: 500px;
   width: 100%;
-  background-color: brown;
+  display: flex;
+  justify-content: center;
 }
 
 .conteudo {
@@ -17,9 +18,7 @@
   flex-direction: column;
   width: 40%;
   margin-bottom: 20px;
-  justify-content: center;
   align-items: center;
-  margin-top: 20px;
 }
 
 .tituloQuemSomos {
