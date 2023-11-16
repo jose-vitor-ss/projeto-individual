@@ -12,11 +12,150 @@ body {
   height: 1024px;
   background: rgba(255, 255, 255, 1);
   opacity: 1;
-  margin-bottom: 100px;
+}
+
+.banner {
+  width: 90%;
+  margin: 40px 5%;
+  height: 400px;
+  border: 4px solid rgba(143, 19, 154, 0.5);
+  border-radius: 20px;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+
+}
+
+.containerCaixas {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 .name {
   color: #fff;
+}
+
+.banner .img {
+  width: fit-content;
+  height: fit-content;
+  justify-content: center;
+  display: flex;
+  padding: 50% 50%;
+  margin: 0 auto;
+}
+
+.caixa {
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 1);
+  opacity: 1;
+
+  top: 631px;
+  left: 190px;
+  border: 4px solid rgba(143, 19, 154, 0.20000000298023224);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0.5620763897895813, 0.07803819328546524, 0.6041666865348816, 0.25);
+  overflow: hidden;
+}
+
+.background-foto {
+  width: 292px;
+  height: 167px;
+  background: rgba(143, 19, 154, 0.20000000298023224);
+  opacity: 1;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+
+.tituloGatos {
+  width: 310px;
+  margin-left: 70px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.tituloGatos .titulo {
+  color: rgba(143, 19, 154, 1);
+  font-family: Poppins;
+  font-weight: SemiBold;
+  font-size: 30px;
+  opacity: 1;
+}
+
+.amigável {
+  width: 69px;
+  height: 25px;
+  background: rgba(235, 157, 3, 1);
+  padding: 5px 10px;
+  margin: 10px;
+  opacity: 1;
+
+  top: 857px;
+  left: 210px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.texto-característica {
+  width: 49px;
+  color: rgba(255, 255, 255, 1);
+  font-family: Poppins;
+  font-weight: SemiBold;
+  font-size: 10px;
+  opacity: 1;
+  display: flex;
+  text-align: center;
+  margin-left: 0;
+}
+
+.containerCaracterísticas {
+  flex-direction: row;
+  display: flex;
+}
+
+.carinhoso {
+  width: 73px;
+  height: 25px;
+  background: rgba(222, 50, 26, 1);
+  padding: 5px 10px;
+  margin: 10px;
+  opacity: 1;
+  border-radius: 30px;
+}
+
+.dócil {
+  width: 50px;
+  height: 25px;
+  background: rgba(3, 96, 235, 1);
+  padding: 5px 10px;
+  margin: 10px;
+  opacity: 1;
+  border-radius: 30px;
+}
+
+.aventureiro {
+  width: 80px;
+  height: 25px;
+  background: rgba(0, 156, 62, 1);
+  padding: 5px 10px;
+  margin: 10px;
+  opacity: 1;
+  border-radius: 30px;
+}
+
+.containerNomeGato {
+  display: flex;
+  margin-left: 10px;
+}
+.nomeGato {
+  width: 51px;
+  color: rgba(0, 0, 0, 1);
+  font-family: Poppins;
+  font-weight: SemiBold;
+  font-size: 20px;
+  opacity: 1;
 }
 
 .a2 {
@@ -29,258 +168,3 @@ body {
   text-decoration: none;
   color: rgba(143, 19, 154, 0.8);
 }
-
-.banner {
-  width: 90%;
-  margin-top: 60px;
-  height: 400px;
-  top: 50px;
-  left: 100px;
-  border: 4px solid rgba(143, 19, 154, 0.5);
-  border-radius: 20px;
-  position: absolute;
-  display: flex;
-  padding: 10px;
-  justify-content: center;
-  
-}
-
-.banner .img {
-  width: fit-content;
-  height: fit-content;
-  justify-content: center;
-  display: flex;
-  padding: 50% 50%;
-  margin: 0 auto;
-}
-
-.caixa1 {
-  width: 300px;
-  height: 300px;
-  background: rgba(255, 255, 255, 1);
-  opacity: 1;
-  position: absolute;
-  top: 631px;
-  left: 190px;
-  border: 4px solid rgba(143, 19, 154, 0.20000000298023224);
-  border-radius: 20px;
-  box-shadow: 0px 4px 4px rgba(0.5620763897895813, 0.07803819328546524, 0.6041666865348816, 0.25);
-  overflow: hidden;
-}
-
-.caixa2 {
-  width: 300px;
-  height: 300px;
-  background: rgba(255, 255, 255, 1);
-  opacity: 1;
-  position: absolute;
-  top: 631px;
-  left: 570px;
-  border: 4px solid rgba(143, 19, 154, 0.20000000298023224);
-  border-radius: 20px;
-  box-shadow: 0px 4px 4px rgba(0.5620763897895813, 0.07803819328546524, 0.6041666865348816, 0.25);
-  overflow: hidden;
-}
-
-.caixa3 {
-  width: 300px;
-  height: 300px;
-  background: rgba(255, 255, 255, 1);
-  opacity: 1;
-  position: absolute;
-  top: 631px;
-  left: 950px;
-  border: 4px solid rgba(143, 19, 154, 0.20000000298023224);
-  border-radius: 20px;
-  box-shadow: 0px 4px 4px rgba(0.5620763897895813, 0.07803819328546524, 0.6041666865348816, 0.25);
-  overflow: hidden;
-}
-
-.background-foto1 {
-  width: 292px;
-  height: 167px;
-  background: rgba(143, 19, 154, 0.20000000298023224);
-  opacity: 1;
-  position: absolute;
-  top: 635px;
-  left: 194px;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  overflow: hidden;
-}
-
-.background-foto2 {
-  width: 292px;
-  height: 167px;
-  background: rgba(143, 19, 154, 0.20000000298023224);
-  opacity: 1;
-  position: absolute;
-  top: 635px;
-  left: 574px;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  overflow: hidden;
-}
-
-.background-foto3 {
-  width: 292px;
-  height: 167px;
-  background: rgba(143, 19, 154, 0.20000000298023224);
-  opacity: 1;
-  position: absolute;
-  top: 635px;
-  left: 954px;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  overflow: hidden;
-}
-
-.tituloGatos {
-  width: 298px;
-  color: rgba(143, 19, 154, 1);
-  position: absolute;
-  top: 546px;
-  left: 120px;
-  font-family: Poppins;
-  font-weight: SemiBold;
-  font-size: 30px;
-  opacity: 1;
-  text-align: left;
-}
-
-.amigável {
-  width: 69px;
-  height: 25px;
-  background: rgba(235, 157, 3, 1);
-  padding: 5px 10px;
-  margin: 10px;
-  opacity: 1;
-  position: absolute;
-  top: 857px;
-  left: 210px;
-  border-radius: 30px;
-  overflow: hidden;
-}
-
-.texto-característica {
-  width: 49px;
-  color: rgba(255, 255, 255, 1);
-  position: absolute;
-  top: 5px;
-  left: 10px;
-  font-family: Poppins;
-  font-weight: SemiBold;
-  font-size: 10px;
-  opacity: 1;
-  text-align: left;
-}
-
-.carinhoso {
-  width: 73px;
-  height: 25px;
-  background: rgba(222, 50, 26, 1);
-  padding: 5px 10px;
-  margin: 10px;
-  opacity: 1;
-  position: absolute;
-  top: 857px;
-  left: 590px;
-  border-radius: 30px;
-  overflow: hidden;
-}
-
-.carinhoso2 {
-  width: 73px;
-  height: 25px;
-  background: rgba(222, 50, 26, 1);
-  padding: 5px 10px;
-  margin: 10px;
-  opacity: 1;
-  position: absolute;
-  top: 857px;
-  left: 970px;
-  border-radius: 30px;
-  overflow: hidden;
-}
-
-.dócil {
-  width: 46px;
-  height: 25px;
-  background: rgba(3, 96, 235, 1);
-  padding: 5px 10px;
-  margin: 10px;
-  opacity: 1;
-  position: absolute;
-  top: 857px;
-  left: 294px;
-  border-radius: 30px;
-  overflow: hidden;
-}
-
-.aventureiro {
-  width: 80px;
-  height: 25px;
-  background: rgba(0, 156, 62, 1);
-  padding: 5px 10px;
-  margin: 10px;
-  opacity: 1;
-  position: absolute;
-  top: 857px;
-  left: 674px;
-  border-radius: 30px;
-  overflow: hidden;
-}
-
-.aventureiro2 {
-  width: 80px;
-  height: 25px;
-  background: rgba(0, 156, 62, 1);
-  padding: 5px 10px;
-  margin: 10px;
-  opacity: 1;
-  position: absolute;
-  top: 857px;
-  left: 1054px;
-  border-radius: 30px;
-  overflow: hidden;
-}
-
-.nomeGato {
-  width: 51px;
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 817px;
-  left: 210px;
-  font-family: Poppins;
-  font-weight: SemiBold;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
-}
-
-.nomeGato2 {
-  width: 72px;
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 817px;
-  left: 590px;
-  font-family: Poppins;
-  font-weight: SemiBold;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
-}
-
-.nomeGato3 {
-  width: 76px;
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 817px;
-  left: 970px;
-  font-family: Poppins;
-  font-weight: SemiBold;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
-}
-
