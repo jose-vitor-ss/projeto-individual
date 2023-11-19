@@ -21,9 +21,14 @@ body {
   border: 4px solid rgba(143, 19, 154, 0.5);
   border-radius: 20px;
   display: flex;
-  padding: 10px;
   justify-content: center;
+}
 
+.imagemBanner {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  border-radius: 16px; /* Mantém o mesmo raio de borda que o banner */
 }
 
 .containerCaixas {
@@ -34,15 +39,6 @@ body {
 
 .name {
   color: #fff;
-}
-
-.banner .img {
-  width: fit-content;
-  height: fit-content;
-  justify-content: center;
-  display: flex;
-  padding: 50% 50%;
-  margin: 0 auto;
 }
 
 .caixa {

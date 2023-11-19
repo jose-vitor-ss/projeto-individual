@@ -11,13 +11,14 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  z-index: -1;
 }
 
 .conteudo {
   display: flex;
   flex-direction: column;
   width: 40%;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
   align-items: center;
 }
 

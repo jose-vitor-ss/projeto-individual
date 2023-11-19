@@ -8,10 +8,10 @@
 
   .bannerQuemSomos {
     display: flex;
-    height: 200px;
+    height: 500px;
     width: 100%;
     background-color: brown;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
   }
 
   .conteudo {
@@ -22,7 +22,6 @@
     margin-bottom: 20px;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
   }
 
   .tituloQuemSomos {
@@ -56,8 +55,7 @@
   .carousel-container {
     position: relative;
     display: flex;
-    width: fit-content;
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -68,24 +66,33 @@
     font-size: 16px;
     padding: 10px;
     cursor: pointer;
-    background-color: #3498db;
-    color: #fff;
+    background-color: transparent;
     border: none;
-    border-radius: 5px;
   }
 
   #ant {
+    position: absolute;
+    top: 50%;
     left: 10px;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    z-index: 1;
   }
 
   #prox {
+    top: 50%;
     right: 10px;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
   }
 
   #carouselImg {
-    max-width: 100%;
-    max-height: 300px;
+    width: 100%;
+    max-height: 500px;
     display: block;
     margin: 0 auto;
-    border-radius: 5px;
   }
