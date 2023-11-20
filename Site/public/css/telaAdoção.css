@@ -28,7 +28,7 @@ body {
   width: 100%; 
   height: 100%; 
   object-fit: cover;
-  border-radius: 16px; /* Mantém o mesmo raio de borda que o banner */
+  border-radius: 16px;
 }
 
 .containerCaixas {

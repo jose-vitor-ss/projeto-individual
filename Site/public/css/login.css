@@ -1,6 +1,11 @@
+body {
+  overflow: hidden;
+}
+
 .naoTenhoConta {
   text-decoration: none;
-  color: white;
+  color: #8F149A;
+  font-weight: bold;
 }
 
 .naoTenhoConta2 {
@@ -19,3 +24,21 @@
     color: rgba(143, 19, 154, 0.8);
   }
   
+  .login{
+    background-image: url("/public/assets/teste-gato\ \(2\).jpg");
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    color: #8F149A;
+    font-weight: bold;
+  }
+
+  span{
+    color: #8F149A;
+  }
+
+  .card-login {
+    color: #8F149A;
+    font-weight: bold;
+  }
