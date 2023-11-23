@@ -21,7 +21,8 @@
   }
 
   .login{
-    background-image: url("/public/assets/teste-gato\ \(2\).jpg");
+   background: url("../assets/teste-gato\ \(2\).jpg") bottom no-repeat;
+   background-size: 100%;
   }
 
   h2 {
