@@ -17,7 +17,7 @@
         <img src="assets\Cat icon.png" style="width:90px; height: 90px">
       </a>
 
-    </div>  
+    </div>
 
     <div class="containerOpções">
       <li>
@@ -50,12 +50,18 @@
 
       <div class="imagemBanner">
         <img class="imagemBanner" src="assets/Cat4.jpg" alt="Imagem do banner">
+
       </div>
 
     </div>
 
     <div class="tituloGatos">
       <span class="titulo">Seu próximo amigo</span>
+
+      <div class="botao1">
+        <button class="botao" onclick="abrir()">Colocar um gato para adoção</button>
+      </div>
+
     </div>
 
     <div class="containerCaixas">
@@ -165,4 +171,8 @@
 </html>
 <script>
   document.body.style.overflowX = "hidden";
+  function abrir() {
+    window.location.href = 'formAdoção.html';
+  }
+  
 </script>

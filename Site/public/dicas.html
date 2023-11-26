@@ -9,20 +9,7 @@
 </head>
 
 <body>
-  <script>
-    fetch('select') = (response) => {
-      var nome = response.forEach(item => item.nome)
-      var raca = response.forEach(item => item.raca)
-      var sobrenome = response.forEach(item => item.sobrenome)
-      if(dados) {
-      mostrar.innerHTML += dados
-      var bananinha123 = createElement('div')
-      bananinha123.classList.add("anotherclass");
-      }else {
-        alert('Dados não encontrados')
-      }
-    }
-  </script>
+
   <header class="header">
     <div class="logo">
       <img src="assets\Cat icon.png" style="width:90px; height: 90px">
@@ -110,3 +97,18 @@
   </footer>
 
 </body>
+
+<script>
+  fetch('select') = (response) => {
+    var nome = response.forEach(item => item.nome)
+    var raca = response.forEach(item => item.raca)
+    var sobrenome = response.forEach(item => item.sobrenome)
+    if (dados) {
+      mostrar.innerHTML += dados
+      var bananinha123 = createElement('div')
+      bananinha123.classList.add("anotherclass");
+    } else {
+      alert('Dados não encontrados')
+    }
+  }
+</script>

@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #adotarForm {
+    width: 40%;
+    margin-bottom: 40px;
+  }
+  
+  .botaoFormAdotar {
+    display: flex;
+    justify-content: center;
+  }
+  
+  h2 {
+    font-size: 30px;
+    color: #8F149A;
+  }
+  
+  .a2 {
+    text-decoration: none;
+    color: #420048;
+    opacity: 0.3;
+  }

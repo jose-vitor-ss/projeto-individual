@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+    <link href="css/formAdotar.css" rel="stylesheet">
+    <link href="css\template.css" rel="stylesheet" />
+    <link href="css\estilo.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="assets\Cat icon.png" style="width:90px; height: 90px">
+        </div>
+        <div class="containerOpções">
+            <li>
+                <a class="a2" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="a2" href="quemSomos.html">Quem Somos</a>
+            </li>
+            <li>
+                <a class="a2" href="dicas.html">Dicas</a>
+            </li>
+            <li>
+                <a class="a2" href="telaAdoção.html">Adote</a>
+            </li>
+            <div class="containerOpções2">
+                <a class="a2" href="cadastro.html" style="color: #8F149A;">
+                    Cadastro
+                </a>
+                <a class="a2 " href="login.html">
+                    <img src="assets\perfil.png" style="width: 30px; height: 30px">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Formulário de Adoção de Gato</h2>
+        <br>
+
+        <form id="adotarForm">
+            <label for="nomeCompleto">Nome completo:</label>
+            <br>
+            <input type="text" id="nomeCompleto" name="nomeCompleto" required>
+
+            <br><br>
+
+            <label for="cpf">CPF:</label>
+            <br>
+            <input type="number" id="cpf" name="cpf" required>
+
+            <br><br>
+
+            <label for="profissao">Profissão:</label>
+            <br>
+            <input type="number" id="profissao" name="profissao" required>
+
+            <br><br>
+
+            <label for="temGato">Já tem algum gato? Fale sobre:</label>
+            <br>
+            <input type="text" id="temGato" name="temGato">
+
+            <br><br>
+
+            <label for="endereco">Endereço:</label>
+            <br>
+            <input type="text" id="endereco" name="endereco">
+
+            <br><br>
+
+            <label for="telefone">Telefone:</label>
+            <br>
+            <input type="text" id="telefone" name="telefone">
+
+            <br><br>
+
+            <label for="idade">Idade:</label>
+            <br>
+            <input type="text" id="idade" name="idade">
+
+            <br><br>
+
+            <label for="bairro">Bairro:</label>
+            <br>
+            <input type="text" id="bairro" name="bairro">
+
+            <br><br>
+
+            <label for="CEP">CEP:</label>
+            <br>
+            <input type="text" id="CEP" name="CEP">
+
+            <br><br>
+
+            <label for="numeroAdultos">Número de adultos em casa:</label>
+            <br>
+            <input type="text" id="numeroAdultos" name="numeroAdultos">
+
+            <br><br>
+
+            <label for="numeroCriancas">Número de crianças em casa:</label>
+            <br>
+            <input type="text" id="numeroCriancas" name="numeroCriancas">
+
+            <br><br>
+
+            <label for="porqueAdotar">Por que quer adotar um gato?</label>
+            <br>
+            <input type="text" id="porqueAdotar" name="porqueAdotar">
+
+            <br><br>
+
+            <label for="moraEm">Você mora em: </label>
+            <br>
+            <select id="moraEm" name="moraEm">
+                <option value="casaAberta">Casa aberta (o gatinho poderá entrar e sair livremente para passear)</option>
+                <option value="casaFechada">Casa fechada (não vou deixar meu gato sair)</option>
+                <option value="apartamentoComTela">Apartamento com telas</option>
+                <option value="apartamentoSemTela">Apartamento sem telas</option>
+                <option value="apartamentoCoberturaCtela">Apartamento tipo cobertura com telas</option>
+                <option value="apartamentoCoberturaStela">Apartamento tipo cobertura sem telas</option>
+                <option value="apartamentoTerreoCexterna">Apartamento no andar térreo com área externa (quintal)</option>
+                <option value="apartamentoTerreoSexterna">Apartamento no andar térreo sem área externa (quintal)</option>
+            </select>
+
+            <br><br>
+
+            <label for="seCasaAlugada">Se sua casa é alugada, o proprietário permite animais? </label>
+            <br>
+            <select id="seCasaAlugada" name="seCasaAlugada">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+                <option value="naoSei">Não sei</option>
+                <option value="casa">Minha casa é própria</option>
+            </select>
+
+            <br><br>
+
+            <label for="teveGatos">Já teve gatos? </label>
+            <br>
+            <select id="teveGatos" name="teveGatos">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <br><br>
+
+            <label for="seJaTeve">Se você já teve gatos em casa, o que aconteceu com eles?</label>
+            <br>
+            <input type="text" id="seJaTeve" name="seJaTeve">
+
+            <br><br>
+
+            <label for="asPessoasConcordam">As pessoas que moram com você concordam com essa adoção?</label>
+            <br>
+            <input type="text" id="asPessoasConcordam" name="asPessoasConcordam">
+
+            <br><br>
+
+            <label for="alguemTemAlergia">Alguém em sua casa tem alergia?</label>
+            <br>
+            <input type="text" id="alguemTemAlergia" name="alguemTemAlergia">
+
+            <br><br>
+
+            <label for="porqueDevolveria">Por quais motivos você devolveria o gatinho?</label>
+            <br>
+            <input type="text" id="porqueDevolveria" name="porqueDevolveria">
+
+            <br><br>
+
+            <label for="responsabilidade">Você está ciente de todas as responsabilidades que você tem sobre o gato que
+                será adotado?</label>
+            <br>
+            <select id="responsabilidade" name="responsabilidade">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <br><br>
+
+            <label for="tireSuasDuvidas">Tire as suas dúvidas nesse espaço</label>
+            <br>
+            <input type="text" id="tireSuasDuvidas" name="tireSuasDuvidas">
+
+            <br><br>
+
+
+            <br><br>
+            <div class="botaoFormAdotar">
+
+                <button class="botao" type="button" onclick="enviarFormulario()">Enviar</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <footer>
+        <div class="container2">
+            <div class="containerItens">
+                <div class="imagens">
+
+                    <a href="" target="_blank">
+                        <img src="assets\facebook.png" width="50px" height="50">
+                    </a>
+
+                    <a href="https://www.instagram.com/adoteumfelpudo/" target="_blank">
+                        <img src="assets\Instagram.png" width="50px" height="50">
+                    </a>
+
+                    <a href="https://twitter.com/adoteumfelpudo" target="_blank">
+                        <img src="assets\Twitter.png" width="50px" height="50">
+                    </a>
+
+                </div>
+                <div>
+                    <b>Fale conosco: AdoteUmFelpudo@gmail.com</b>
+                </div>
+            </div>
+    </footer>
+
+</body>
+
+<script>
+    function enviarFormulario() {
+        // Obter os dados do formulário
+        const formData = new FormData(document.getElementById('adotarForm'));
+
+        // Simular o envio para um servidor fictício
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Dados enviados com sucesso:', data);
+                // Adicione aqui lógica adicional após o envio bem-sucedido
+            })
+            .catch(error => {
+                console.error('Erro ao enviar dados:', error);
+                // Adicione aqui lógica de tratamento de erros
+            });
+    }
+</script>
+
+</html>

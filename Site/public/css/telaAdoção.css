@@ -66,10 +66,10 @@ body {
 
 
 .tituloGatos {
-  width: 310px;
-  margin-left: 70px;
-  margin-bottom: 15px;
-  text-align: center;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-right: 10px;
+  position: relative;
 }
 
 .tituloGatos .titulo {
@@ -78,6 +78,7 @@ body {
   font-weight: SemiBold;
   font-size: 30px;
   opacity: 1;
+  margin-left: 5%;
 }
 
 .amigável {
@@ -163,4 +164,26 @@ body {
 .a1 {
   text-decoration: none;
   color: rgba(143, 19, 154, 0.8);
+}
+
+.botao {
+  cursor: pointer;
+  font-family: "Barlow", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  background-color: #8F149A;
+  width: 200px;
+  height: fit-content;
+  padding: 3%;
+}
+
+.botao1{
+  width: fit-content;
+  position: absolute;
+  right: 5%;
+  top: 0;
+
 }

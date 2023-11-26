@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+    <link href="css/formAdoção.css" rel="stylesheet">
+    <link href="css\template.css" rel="stylesheet" />
+    <link href="css\estilo.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="assets\Cat icon.png" style="width:90px; height: 90px">
+        </div>
+        <div class="containerOpções">
+            <li>
+                <a class="a2" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="a2" href="quemSomos.html">Quem Somos</a>
+            </li>
+            <li>
+                <a class="a2" href="dicas.html">Dicas</a>
+            </li>
+            <li>
+                <a class="a2" href="telaAdoção.html">Adote</a>
+            </li>
+            <div class="containerOpções2">
+                <a class="a2" href="cadastro.html" style="color: #8F149A;">
+                    Cadastro
+                </a>
+                <a class="a2 " href="login.html">
+                    <img src="assets\perfil.png" style="width: 30px; height: 30px">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Formulário de Adoção de Gato</h2>
+        <br>
+
+        <form id="adoptionForm">
+            <label for="nomeGato">Nome do Gato:</label>
+            <br>
+            <input type="text" id="nomeGato" name="nomeGato" required>
+
+            <br><br>
+
+            <label for="idadeGato">Idade do Gato:</label>
+            <br>
+            <input type="number" id="idadeGato" name="idadeGato" required>
+
+            <br><br>
+
+            <label>Características principais:</label>
+            <br>
+            <input type="checkbox" id="amigavel" name="caracteristicas" value="Amigável">
+            <label for="amigavel">Amigável</label>
+
+            <br>
+
+            <input type="checkbox" id="docil" name="caracteristicas" value="Dócil">
+         
+            <label for="docil">Dócil</label>
+
+            <br>
+
+            <input type="checkbox" id="carinhoso" name="caracteristicas" value="Carinho">
+         
+            <label for="carinhoso">Carinhoso</label>
+
+            <br>
+
+            <input type="checkbox" id="aventureiro" name="caracteristicas" value="Aventureiro">
+      
+            <label for="aventureiro">Aventureiro</label>
+
+            <br><br>
+
+            <label for="raca">Raça:</label>
+            <br>
+            <input type="text" id="raca" name="raca">
+
+            <br><br>
+
+            <label for="cor">Cor:</label>
+            <br>
+            <input type="text" id="cor" name="cor">
+
+            <br><br>
+
+            <label for="doencas">Possui doenças?</label>
+            <br>
+            <select id="doencas" name="doencas">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <br><br>
+
+            <label for="quaisDoencas">Quais doenças?</label>
+            <br>
+            <input type="text" id="quaisDoencas" name="quaisDoencas">
+
+            <br><br>
+
+            <label for="vacinado">Vacinado?</label>
+            <br>
+            <select id="vacinado" name="vacinado">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <br><br>
+
+            <label>Sexo do Gato:</label> <br>
+            <input type="radio" id="macho" name="sexo" value="Macho">
+            <label for="macho">Macho</label>
+            <input type="radio" id="femea" name="sexo" value="Fêmea">
+            <label for="femea">Fêmea</label>
+
+            <br><br>
+
+            <label for="castrado">Esterilizado/ Castrado:</label>
+            <br>
+            <select id="castrado" name="castrado">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <br><br>
+
+            <label for="historiaGato">História do Gato:</label>
+            <br>
+            <textarea id="historiaGato" name="historiaGato" rows="4" required></textarea>
+
+            <br><br>
+
+            <label for="nivelAtividade">Nível de Atividade:</label>
+            <br>
+            <select id="nivelAtividade" name="nivelAtividade">
+                <option value="baixo">Baixo</option>
+                <option value="medio">Médio</option>
+                <option value="alto">Alto</option>
+            </select>
+
+            <br><br>
+
+            <label for="necessidadesEspeciais">Necessidades Especiais:</label>
+            <br>
+            <textarea id="necessidadesEspeciais" name="necessidadesEspeciais" rows="4"></textarea>
+
+            <br><br>
+
+            <label for="relacaoComOutrosAnimais">Relação com Outros Animais:</label>
+            <br>
+            <textarea id="relacaoComOutrosAnimais" name="relacaoComOutrosAnimais" rows="4"></textarea>
+
+            <br><br>
+
+            <label for="ambientePreferido">Ambiente Preferido:</label>
+            <br>
+            <textarea id="ambientePreferido" name="ambientePreferido" rows="4"></textarea>
+
+            <br><br>
+
+            <label for="fotosGato">Fotos do Gato:</label>
+            <br>
+            <input type="file" id="fotosGato" name="fotosGato" accept="image/*">
+
+            <br><br>
+
+            <label for="nomeResponsavel">Nome do responsável pela adoção:</label>
+            <br>
+            <input type="text" id="nomeResponsavel" name="nomeResponsavel" required>
+
+            <br><br>
+
+            <label for="telefoneResponsavel">Número de telefone:</label>
+            <br>
+            <input type="tel" id="telefoneResponsavel" name="telefoneResponsavel" required>
+
+            <br><br>
+
+            <label for="emailResponsavel">E-mail de contato:</label>
+            <br>
+            <input type="email" id="emailResponsavel" name="emailResponsavel" required>
+
+            <br><br>
+
+            <label for="termosCondicoes">Termos e Condições pessoais (será avaliado em contato com o adotante):</label>
+            <br>
+            <textarea id="termosCondicoes" name="termosCondicoes" rows="4" required></textarea>
+
+            <br><br>
+            <div class="botaoFormAdocao">
+
+                <button class="botao" type="button" onclick="enviarFormulario()">Enviar</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <footer>
+        <div class="container2">
+            <div class="containerItens">
+                <div class="imagens">
+
+                    <a href="" target="_blank">
+                        <img src="assets\facebook.png" width="50px" height="50">
+                    </a>
+
+                    <a href="https://www.instagram.com/adoteumfelpudo/" target="_blank">
+                        <img src="assets\Instagram.png" width="50px" height="50">
+                    </a>
+
+                    <a href="https://twitter.com/adoteumfelpudo" target="_blank">
+                        <img src="assets\Twitter.png" width="50px" height="50">
+                    </a>
+
+                </div>
+                <div>
+                    <b>Fale conosco: AdoteUmFelpudo@gmail.com</b>
+                </div>
+            </div>
+    </footer>
+
+</body>
+
+<script>
+    function enviarFormulario() {
+        // Obter os dados do formulário
+        const formData = new FormData(document.getElementById('adoptionForm'));
+
+        // Simular o envio para um servidor fictício
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Dados enviados com sucesso:', data);
+                // Adicione aqui lógica adicional após o envio bem-sucedido
+            })
+            .catch(error => {
+                console.error('Erro ao enviar dados:', error);
+                // Adicione aqui lógica de tratamento de erros
+            });
+    }
+</script>
+
+</html>

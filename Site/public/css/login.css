@@ -14,31 +14,31 @@ body {
 }
 
 .a2 {
-    text-decoration: none;
-    color: #420048;
-    opacity: 0.3;
-  }
-  
-  .a1 {
-    text-decoration: none;
-    color: rgba(143, 19, 154, 0.8);
-  }
-  
-  .login{
-    background-image: url("/public/assets/teste-gato\ \(2\).jpg");
-    margin-bottom: 0px;
-  }
+  text-decoration: none;
+  color: #420048;
+  opacity: 0.3;
+}
 
-  h2 {
-    color: #8F149A;
-    font-weight: bold;
-  }
+.a1 {
+  text-decoration: none;
+  color: rgba(143, 19, 154, 0.8);
+}
 
-  span{
-    color: #8F149A;
-  }
+.login {
+  background: url("../assets/teste-gato\ \(2\).jpg") bottom no-repeat;
+  background-size: 100%;
+}
 
-  .card-login {
-    color: #8F149A;
-    font-weight: bold;
-  }
+h2 {
+  color: #8F149A;
+  font-weight: bold;
+}
+
+span {
+  color: #8F149A;
+}
+
+.card-login {
+  color: #8F149A;
+  font-weight: bold;
+}
