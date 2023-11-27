@@ -2,11 +2,6 @@ CREATE DATABASE adoteFelpudos;
 
 USE adoteFelpudos;
 
-CREATE TABLE gatil (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	razao_social VARCHAR(50)
-);
-
 CREATE TABLE usuario (
 	pessoaId INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
@@ -16,26 +11,26 @@ CREATE TABLE usuario (
 );
 
 CREATE TABLE formularioAdocao (
-	idFormulario INT PRIMARY KEY AUTO_INCREMENT,
+    idFormulario INT PRIMARY KEY AUTO_INCREMENT,
     nomeGato VARCHAR(50),
     idadeGato CHAR(2),
     caractP VARCHAR(50),
     raca VARCHAR(25),
     cor VARCHAR(25),
-    possuiDoencas,
+    possuiDoencas BOOLEAN,
     quaisDoencas VARCHAR(100),
     vacinado VARCHAR(50),
-    sexoGato VARCHAR(50), 
+    sexoGato VARCHAR(50),
     esterelizado VARCHAR(50),
-    historiaDoGato longtext VARCHAR(50),
+    historiaDoGato LONGTEXT, 
     nivelAtividade VARCHAR(50),
     necessidadesEspeciais VARCHAR(50),
-    relacaoAnimais longtext,
-    ambientePreferido longtext,
+    relacaoAnimais LONGTEXT,
+    ambientePreferido LONGTEXT,
     fotoDoGato VARCHAR(50),
     numeroTelefone VARCHAR(50),
     email VARCHAR(50),
-    termosCond longtext
+    termosCond LONGTEXT
 );
 
 CREATE TABLE formularioAdotar (

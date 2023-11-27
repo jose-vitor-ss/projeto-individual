@@ -58,28 +58,14 @@
 
             <br><br>
 
-            <label>Características principais:</label>
+            <label for="caractP">Escolha a característica principal</label>
             <br>
-            <input type="checkbox" id="amigavel" name="caracteristicas" value="Amigável">
-            <label for="amigavel">Amigável</label>
-
-            <br>
-
-            <input type="checkbox" id="docil" name="caracteristicas" value="Dócil">
-         
-            <label for="docil">Dócil</label>
-
-            <br>
-
-            <input type="checkbox" id="carinhoso" name="caracteristicas" value="Carinho">
-         
-            <label for="carinhoso">Carinhoso</label>
-
-            <br>
-
-            <input type="checkbox" id="aventureiro" name="caracteristicas" value="Aventureiro">
-      
-            <label for="aventureiro">Aventureiro</label>
+            <select id="caractP" name="doencas">
+                <option value="docil">Dócil</option>
+                <option value="aventureiro">Aventureiro</option>
+                <option value="carinhoso">Carinhoso</option>
+                <option value="amigavel">Amigável</option>
+            </select>
 
             <br><br>
 
@@ -118,12 +104,12 @@
             </select>
 
             <br><br>
-
-            <label>Sexo do Gato:</label> <br>
-            <input type="radio" id="macho" name="sexo" value="Macho">
-            <label for="macho">Macho</label>
-            <input type="radio" id="femea" name="sexo" value="Fêmea">
-            <label for="femea">Fêmea</label>
+            <label for="sexoGato">Sexo do Gato:?</label>
+            <br>
+            <select id="sexoGato" name="sexoGato">
+                <option value="macho">Macho</option>
+                <option value="femea">Fêmea</option>
+            </select>
 
             <br><br>
 
@@ -170,9 +156,9 @@
 
             <br><br>
 
-            <label for="fotosGato">Fotos do Gato:</label>
+            <label for="fotoGato">Fotos do Gato:</label>
             <br>
-            <input type="file" id="fotosGato" name="fotosGato" accept="image/*">
+            <input type="file" id="fotoGato" name="fotoGato" accept="image/*">
 
             <br><br>
 
@@ -201,7 +187,7 @@
             <br><br>
             <div class="botaoFormAdocao">
 
-                <button class="botao" type="button" onclick="enviarFormulario()">Enviar</button>
+                <button class="botao" type="button" onclick="cadastrar()">Enviar</button>
 
             </div>
 
@@ -236,24 +222,138 @@
 </body>
 
 <script>
-    function enviarFormulario() {
-        // Obter os dados do formulário
-        const formData = new FormData(document.getElementById('adoptionForm'));
+    // function enviarFormulario() {
+    //     // Obter os dados do formulário
+    //     const formData = new FormData(document.getElementById('adoptionForm'));
 
-        // Simular o envio para um servidor fictício
-        fetch('https://jsonplaceholder.typicode.com/posts', {
-            method: 'POST',
-            body: formData
+    //     // Simular o envio para um servidor fictício
+    //     fetch('/gato/cadastrar', {
+    //         method: 'POST',
+    //         body: formData
+    //     })
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             console.log('Dados enviados com sucesso:', data);
+    //             // Adicione aqui lógica adicional após o envio bem-sucedido
+    //         })
+    //         .catch(error => {
+    //             console.error('Erro ao enviar dados:', error);
+    //             // Adicione aqui lógica de tratamento de erros
+    //         });
+    // }
+
+    function cadastrar() {
+        // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeGatoVar = nomeGato.value;
+        var idadeGatoVar = idadeGato.value;
+        var caractPVar = caractP.value;
+        var racaVar = raca.value;
+        var corVar = cor.value;
+        var possuiDoencasVar = doencas.value;
+        var quaisDoencasVar = quaisDoencas.value;
+        var vacinadoVar = vacinado.value;
+        var sexoGatoVar = sexoGato.value;
+        var castradoVar = castrado.value;
+        var historiaDoGatoVar = historiaGato.value;
+        var nivelAtividadeVar = nivelAtividade.value;
+        var necessidadesEspeciaisVar = necessidadesEspeciais.value;
+        var relacaoComOutrosAnimaisVar = relacaoComOutrosAnimais.value;
+        var ambientePreferidoVar = ambientePreferido.value;
+        // var fotoGatoVar = fotoGato.value;
+        var telefoneResponsavelVar = telefoneResponsavel.value;
+        var emailResponsavelVar = emailResponsavel.value;
+        var termosCondVar = termosCondicoes.value;
+
+        if (
+            nomeGatoVar == "" ||
+            idadeGatoVar == "" ||
+            caractPVar == "" ||
+            racaVar == "" ||
+            corVar == "" ||
+            possuiDoencasVar == "" ||
+            quaisDoencasVar == "" ||
+            vacinadoVar == "" ||
+            sexoGatoVar == "" ||
+            castradoVar == "" ||
+            historiaDoGatoVar == "" ||
+            nivelAtividadeVar == "" ||
+            necessidadesEspeciaisVar == "" ||
+            relacaoComOutrosAnimaisVar == "" ||
+            ambientePreferidoVar == "" ||
+            // fotoGatoVar == "" ||
+            telefoneResponsavelVar == "" ||
+            emailResponsavelVar == "" ||
+            termosCondVar == ""
+        ) {
+            // cardErro.style.display = "block";
+            // mensagem_erro.innerHTML =
+            //   "(Mensagem de erro para todos os campos em branco)";
+
+            //   finalizarAguardar();
+            return false;
+        }
+        // } else {
+        //   setInterval(sumirMensagem, 5000);
+        // }
+
+        // Enviando o valor da nova input
+        fetch("gato/cadastrarGato", { 
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeGatoServer: nomeGatoVar,
+                idadeGatoServer: idadeGatoVar,
+                caractPServer: caractPVar,
+                racaServer: racaVar,
+                corServer: corVar,
+                doencasServer: possuiDoencasVar,
+                quaisDoencasServer: quaisDoencasVar,
+                vacinadoServer: vacinadoVar,
+                sexoGatoServer: sexoGatoVar,
+                castradoServer: castradoVar,
+                historiaDoGatoServer: historiaDoGatoVar,
+                nivelAtividadeServer: nivelAtividadeVar,
+                necessidadesEspeciaisServer: necessidadesEspeciaisVar,
+                relacaoComOutrosAnimaisServer: relacaoComOutrosAnimaisVar,
+                ambientePreferidoServer: ambientePreferidoVar,
+                // fotoGatoServer: fotoGatoVar,
+                telefoneResponsavelServer: telefoneResponsavelVar,
+                emailResponsavelServer: emailResponsavelVar,
+                termosCondicoesServer: termosCondVar
+            }),
         })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Dados enviados com sucesso:', data);
-                // Adicione aqui lógica adicional após o envio bem-sucedido
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    //   cardErro.style.display = "block";
+
+                    //   mensagem_erro.innerHTML =
+                    //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                    setTimeout(() => {
+                        window.location = "login.html";
+                    }, "2000");
+
+                    // limparFormulario();
+                    // finalizarAguardar();
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
             })
-            .catch(error => {
-                console.error('Erro ao enviar dados:', error);
-                // Adicione aqui lógica de tratamento de erros
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                // finalizarAguardar();
             });
+
+        return false;
     }
 </script>
 
