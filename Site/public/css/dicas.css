@@ -48,5 +48,11 @@ span{
 .a1 {
   text-decoration: none;
   color: rgba(143, 19, 154, 0.8);
-  ;
+}
+
+.videoGato {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
 }
