@@ -1,0 +1,13 @@
+.container-dashboards {
+    display: flex;
+    justify-content: flex-end; /* Isso alinhará os itens à direita do contêiner pai */
+    padding: 10px; /* Adicione o espaçamento desejado se necessário */
+    height: 100vh;
+}
+
+h1{
+    color: #8F149A;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}

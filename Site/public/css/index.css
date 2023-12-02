@@ -51,7 +51,7 @@
     ;
   }
 
-  .carousel-container {
+  .carrosel-container {
     position: relative;
     display: flex;
     width: 100%;
@@ -89,7 +89,7 @@
     border: none;
   }
 
-  #carouselImg {
+  #carroselImagens {
     width: 100%;
     max-height: 500px;
     display: block;

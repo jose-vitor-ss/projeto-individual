@@ -1,0 +1,38 @@
+Aqui na tela home temos um banner, onde eu utilizei vetor para armazenar as imagens dos gatinhos, criei uma função de carrosel de imagens, onde possui duas funções, sendo que a "trocarImagem" puxa a função mostrarImagem, onde ela exibe as imagens que estão presentes no carrosel, aqui temos um if que verificar se N ultrapassou o tamanho do vetor, caso tenha ultrapassado ele define o index como 1, voltando para a primeira imagem, e se N for menor do que 1 ele vai para a última imagem do vetor, aqui em baixo utilizei getElement para puxar a imagem do carrosel de imagens, que é definida em baixo utilizando src como o vetor, sendo index - 1 porque o vetor em javascript começa pelo 0.
+Na parte de baixo eu conto os benefícios da adoção responsável, tanto para o tutor quanto para o felino, eu achei muito importante já deixar isso na tela Home para dar contexto ao usuário de todo o intuito do site previamente.
+
+Aqui nessa tela temos o Quem Somos, aqui na parte superior utilizei a tag <video>, deixei com dois atributos, autoplay e loop, para assim que o usuario entrar na página o video começar a rodar e ficar se repetindo, não deixei a função control para não poluir a página visualmente falando. Aqui em baixo contei um pouco de onde surgiu a ideia do projeto e contextualizei o intuito do projeto para o usuário. 
+
+Seguindo para a tela de Dicas, utilizei o mesmo conceito da tag video da página anterior e aqui em baixo falei um pouco sobre adoção responsável e contextualizei para o usuário a importância dos formulários do site.
+
+Indo para a tela "Adote" criei um banner e aqui temos a tela onde o usuario poderá visualizar os gatos disponiveis para adoção e por meio deste formulário ele poderá colocar um gato para ser adotado.
+
+Aqui temos o login e o cadastro (realizo um cadastro, faço login e preencho um formulário para upar um gato na tela de adote)
+
+Explico o que acontece caso a pessoa clique para adotar um gato.
+
+E caso o usuário clique no ícone do site ele será direcionado para uma tela onde eu mostro os meus 3 atuais gatinhos, Pandora, Fumaça e a Pandora, e o meu primeiro gato, o Shaollin, o motivo pelo qual eu me apaixonei por esses bichinhos peludos.
+
+Mostro a modelagem
+
+Faço os agradecimentos
+
+
+
+Contexto
+
+Meus valores
+
+Ferramenta de gestão utilizada - Trello
+
+Site (texto acima)
+
+Modelagem
+
+Qual foi a minha maior dificuldade
+
+Maior superação
+
+Agradecimentos
+
+Conclusão

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/profileTemplate.css">
+    <link rel="stylesheet" href="css/perfi.css">
     <title>Document</title>
 </head>
+
 <body>
 
     <div class="containerTotal">
@@ -15,26 +18,198 @@
             <div class="logo">
 
                 <a href="ondeTudoComecou.html">
-                  <img src="assets\Cat icon.png" style="width:90px; height: 90px">
+                    <img src="assets\Cat icon.png" style="width:90px; height: 90px">
                 </a>
-          
-              </div>
-                <div class="containerOpções">
-                 <li>
-                   <a class="a2" href="index.html">Home</a>
-                 </li>
-                 <li>
-                   <a class="a2" href="quemSomos.html">Quem Somos</a>
-                 </li> 
-                  <li>
-                  <a class="a2" href="dicas.html">Dicas</a>
-                  </li>
-                  <li>
-                  <a class="a2" href="telaAdoção.html">Adote</a>
-                  </li>
-             </div>       
+
             </div>
-       
+
+            <div class="containerOpções">
+                <li>
+                    <a class="a2" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="a2" href="quemSomos.html">Quem Somos</a>
+                </li>
+                <li>
+                    <a class="a2" href="dicas.html">Dicas</a>
+                </li>
+                <li>
+                    <a class="a2" href="telaAdoção.html">Adote</a>
+                </li>
+            </div>
+
+        </div>
+
+        <div class="container-forms">
+            <h2>Atualizar as informações do seu formulário</h2>
+
+
+            <form id="adotarForm">
+                <label for="nomeCompleto">Nome completo:</label>
+
+                <input type="text" id="nomeCompleto" name="nomeCompleto" required>
+
+
+
+                <label for="cpf">CPF:</label>
+
+                <input type="number" id="cpf" name="cpf" required>
+
+
+
+                <label for="profissao">Profissão:</label>
+
+                <input type="number" id="profissao" name="profissao" required>
+
+                <br><br>
+
+                <label for="temGato">Já tem algum gato? Fale sobre:</label>
+
+                <input type="textarea" id="temGato" name="temGato">
+
+
+
+                <label for="endereco">Endereço:</label>
+
+                <input type="text" id="endereco" name="endereco">
+
+
+
+                <label for="telefone">Telefone:</label>
+
+                <input type="text" id="telefone" name="telefone">
+
+                <br><br>
+
+                <label for="idade">Idade:</label>
+
+                <input type="text" id="idade" name="idade">
+
+
+
+                <label for="bairro">Bairro:</label>
+
+                <input type="text" id="bairro" name="bairro">
+
+
+
+                <label for="CEP">CEP:</label>
+
+                <input type="text" id="CEP" name="CEP">
+
+                <br><br>
+
+                <label for="numeroAdultos">Número de adultos em casa:</label>
+
+                <input type="text" id="numeroAdultos" name="numeroAdultos">
+
+
+
+                <label for="numeroCriancas">Número de crianças em casa:</label>
+
+                <input type="text" id="numeroCriancas" name="numeroCriancas">
+
+                <br><br>
+
+                <label for="porqueAdotar">Por que quer adotar um gato?</label>
+
+                <input type="text" id="porqueAdotar" name="porqueAdotar">
+
+                <br><br>
+
+                <label for="moraEm">Você mora em: </label>
+
+                <select id="moraEm" name="moraEm">
+                    <option value="casaAberta">Casa aberta (o gatinho poderá entrar e sair livremente para passear)
+                    </option>
+                    <option value="casaFechada">Casa fechada (não vou deixar meu gato sair)</option>
+                    <option value="apartamentoComTela">Apartamento com telas</option>
+                    <option value="apartamentoSemTela">Apartamento sem telas</option>
+                    <option value="apartamentoCoberturaCtela">Apartamento tipo cobertura com telas</option>
+                    <option value="apartamentoCoberturaStela">Apartamento tipo cobertura sem telas</option>
+                    <option value="apartamentoTerreoCexterna">Apartamento no andar térreo com área externa (quintal)
+                    </option>
+                    <option value="apartamentoTerreoSexterna">Apartamento no andar térreo sem área externa (quintal)
+                    </option>
+                </select>
+
+                <br><br>
+
+                <label for="seCasaAlugada">Se sua casa é alugada, o proprietário permite animais? </label>
+
+                <select id="seCasaAlugada" name="seCasaAlugada">
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                    <option value="naoSei">Não sei</option>
+                    <option value="casa">Minha casa é própria</option>
+                </select>
+
+
+
+                <label for="teveGatos">Já teve gatos? </label>
+
+                <select id="teveGatos" name="teveGatos">
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+
+                <br><br>
+
+                <label for="seJaTeve">Se você já teve gatos em casa, o que aconteceu com eles?</label>
+
+                <input type="text" id="seJaTeve" name="seJaTeve">
+
+                <br><br>
+
+                <label for="asPessoasConcordam">As pessoas que moram com você concordam com essa adoção?</label>
+
+                <input type="text" id="asPessoasConcordam" name="asPessoasConcordam">
+
+                <br><br>
+
+                <label for="alguemTemAlergia">Alguém em sua casa tem alergia?</label>
+
+                <input type="text" id="alguemTemAlergia" name="alguemTemAlergia">
+
+
+
+                <label for="porqueDevolveria">Por quais motivos você devolveria o gatinho?</label>
+
+                <input type="text" id="porqueDevolveria" name="porqueDevolveria">
+
+                <br><br>
+
+                <label for="responsabilidade">Você está ciente de todas as responsabilidades que você tem sobre o gato
+                    que
+                    será adotado?</label>
+
+                <select id="responsabilidade" name="responsabilidade">
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+
+                <br><br>
+
+                <label for="tireSuasDuvidas">Tire as suas dúvidas nesse espaço</label>
+
+                <input type="text" id="tireSuasDuvidas" name="tireSuasDuvidas">
+
+
+                <br><br>
+
+
+                <div class="botaoFormAdotar">
+
+                    <button class="botao" type="button" onclick="enviarFormulario()">Enviar</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+
 
         <header class="barra">
             <div class="col-1">
@@ -42,16 +217,40 @@
                     <img src="assets\catUser.png" alt="" class="img-usuario">
                 </div>
                 <button id="perfilId" class="btn cima" onclick="perfil()"><a href="./perfil.html">Perfil</a></button>
-                <button id="dadosId" class="btn meio" onclick="dados()"><a href="./meusGatosParaAdoção.html">Meus gatos para adoção</a></button>
-                <button id="dadosId" class="btn meio" onclick="dados()"><a href="./dashboard.html">Dashboard</a></button>
+                <button id="dadosId" class="btn meio" onclick="dados()"><a href="./meusGatosParaAdoção.html">Meus gatos
+                        para adoção</a></button>
+                <button id="dadosId" class="btn meio" onclick="dados()"><a
+                        href="./dashboard.html">Dashboard</a></button>
             </div>
             <div class="col-2">
                 <button class="btn"><a href="./index.html">Sair</a><i class='bx bx-exit'></i></button>
             </div>
-            
+
         </header>
     </div>
-       
+
 </body>
 
 </html>
+
+<script>
+    function enviarFormulario() {
+        // Obter os dados do formulário
+        const formData = new FormData(document.getElementById('adotarForm'));
+
+        // Simular o envio para um servidor fictício
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Dados enviados com sucesso:', data);
+                // Adicione aqui lógica adicional após o envio bem-sucedido
+            })
+            .catch(error => {
+                console.error('Erro ao enviar dados:', error);
+                // Adicione aqui lógica de tratamento de erros
+            });
+    }
+</script>

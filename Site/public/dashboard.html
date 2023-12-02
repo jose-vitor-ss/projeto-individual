@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/profileTemplate.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Document</title>
 </head>
 
@@ -22,10 +24,26 @@
                 <div class="logo">
 
                     <a href="ondeTudoComecou.html">
-                      <img src="assets\Cat icon.png" style="width:90px; height: 90px">
-                    </a>
-              
+                        <img src="assets\Cat icon.png" style="width:90px; height: 90px">
+                      </a>
+
+                        <div class="titulo">
+                            <h1>Dashboard</h1>
+                        </div>
+
+                      <div class="container-dashboards">
+                       
+                        <div>
+                            <canvas id="myChart" style="position: relative; height:40vh; width:40vw"></canvas>
+                        </div>
+                    
+                        <div>
+                            <canvas id="myChart2" style="position: relative; height:40vh; width:40vw"></canvas>
+                        </div>
+
+                    </div>
                   </div>
+                  
                     <div class="containerOpções">
                      <li>
                        <a class="a2" href="index.html">Home</a>
@@ -57,12 +75,81 @@
                 </div>
                 
             </header>
+
+        
+
         </div>
            
+        
 </body>
 
 </html>
 <script>
+
+const labels = [
+      
+    ];
+    const labels2 = [
+       
+    ];
+
+    const data = {
+    datasets: [{
+        label: '',
+        backgroundColor: ['rgb(255, 99, 132)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)', 'rgb(153, 102, 255)', 'rgb(255, 159, 64)'],
+        borderColor: 'rgb(255, 255, 255)',
+        data: [30, 29, 28, 25, 22, 23],
+         }]
+        };
+
+    const data2 = {
+    datasets: [{
+        label: '',
+        backgroundColor: ['rgb(255, 99, 132)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)', 'rgb(153, 102, 255)', 'rgb(255, 159, 64)'],
+        borderColor: 'rgb(255, 255, 255)',
+        data: [22, 24, 27, 23, 20 , 18],
+    }]
+};
+
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+        plugins: {
+            title: {
+                display: true,
+                text: 'Cores de gatos mais upados no site'
+            }
+        }
+    }
+};
+
+        const config2 = {
+            type: 'bar',
+        data: data2,
+        options: {
+        plugins: {
+            title: {
+                display: true,
+                text: 'Característica dos gatos mais upada'
+            }
+        }
+    }
+};
+
+
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+
+        const myChart2 = new Chart(
+            document.getElementById('myChart2'),
+            config2
+        );
+
+
+
 
 window.onload = obterDadosGrafico();
     

@@ -46,12 +46,12 @@
   <div class="containerQuemSomos">
 
     <div class="bannerQuemSomos">
-      <div class="carousel-container">
-        <button id="ant" onclick="changeImage(-1)">
+      <div class="carrosel-container">
+        <button id="ant" onclick="trocarImagem(-1)">
           <img src="assets\seta-esquerda.png" alt="Anterior">
         </button>
-        <img id="carouselImg" src="assets/image1.jpg" alt="Imagem do Carrossel">
-        <button id="prox" onclick="changeImage(1)">
+        <img id="carroselImagens" src="assets/image1.jpg" alt="Imagem do Carrossel">
+        <button id="prox" onclick="trocarImagem(1)">
           <img src="assets\seta-direita.png" alt="Próxima">
         </button>
       </div>
@@ -115,24 +115,24 @@
 </html>
 
 <script>
-  let currentIndex = 1;
+  let index = 1;
 
-  function changeImage(n) {
-    showImage(currentIndex += n);
+  function trocarImagem(n) {
+    mostrarImagem(index += n);
   }
 
-  function showImage(n) {
-    const images = ["assets/image1.jpg", "assets/image2.png", "assets/image3.jpg"]; // Adicione o caminho das suas imagens aqui
+  function mostrarImagem(n) {
+    const images = ["assets/image1.jpg", "assets/image2.png", "assets/image3.jpg"]; 
     if (n > images.length) {
-      currentIndex = 1;
+      index = 1;
     } else if (n < 1) {
-      currentIndex = images.length;
+      index = images.length;
     }
 
-    const carouselImg = document.getElementById('carouselImg');
-    carouselImg.src = images[currentIndex - 1];
+    const carroselImagens = document.getElementById('carroselImagens');
+    carroselImagens.src = images[index - 1];
   }
 
-  showImage(currentIndex);
+  mostrarImagem(index);
   
 </script>

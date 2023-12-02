@@ -19,6 +19,9 @@ body {
     justify-content: space-between;
     background: #8F149A;
     margin-right: auto; 
+    position: fixed;
+    top: 0; /* Posiciona o elemento no topo da tela */
+    left: 0; /* Posiciona o elemento à direita da tela */
 }
 
 
@@ -58,7 +61,7 @@ body {
 
 .header2 {
     display: flex;
-    position: absolute;
+    position:relative;
     margin-left: 15%;
     width: 85%;
     height: 100px;
