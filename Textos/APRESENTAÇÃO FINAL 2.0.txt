@@ -1,0 +1,54 @@
+- Apresentação	
+	Bom dia, hoje eu vou apresentar o meu projeto individual, o "Adote um Felpudo".
+	De começo eu já queria ressaltar que eu realizei esse projeto em especial em memória ao meu primeiro gato, o Shaollin.
+
+- Em memória
+
+	Abordando um pouco o contexto, isto é, quando tudo isso começou e a importância na minha vida, tudo começou quando eu tinha 7 anos com a adoção do meu primeiro gato, o Shaollin,  é possível visualizar a foto dele no site na parte de homenagem. 
+	Ele foi de suma importância e foi o estopim para eu cultivar cada vez mais interessse e um carinho especial por esses animais.
+	Atualmente eu tenho 3 gatos, o Simba, o Pandora e o Fumaça, tenho contato com eles basicamente todo instante que estou em casa, eles sempre ficam por perto das pessoas de casa, são extremamente carinhosos e manhosos.
+
+
+- Meus valores
+
+	Os meus valores fundamentais foram: - foco, determinação, comprometimento, persistência e criatividade. Esses valores foram de extrema importância para a conclusão do meu proejto, me manteram firme, consistente no projeto e sem me deixar abalar pelas dificuldades em realiza-lo.
+
+- Site
+
+	Aqui na tela home temos um banner, onde eu utilizei vetor para armazenar as imagens dos gatinhos, criei uma função de carrosel de imagens, onde possui duas funções, sendo que a "trocarImagem" puxa a função mostrarImagem, onde ela exibe as imagens que estão presentes no carrosel, aqui temos um if que verificar se N ultrapassou o tamanho do vetor, caso tenha ultrapassado ele define o index como 1, voltando para a primeira imagem, e se N for menor do que 1 ele vai para a última imagem do vetor, aqui em baixo utilizei getElement para puxar a imagem do carrosel de imagens, que é definida em baixo utilizando src como o vetor, sendo index - 1 porque o vetor em javascript começa pelo 0.
+Na parte de baixo eu conto os benefícios da adoção responsável, tanto para o tutor quanto para o felino, eu achei muito importante já deixar isso na tela Home para dar contexto ao usuário de todo o intuito do site previamente.
+
+	Aqui nessa tela temos o Quem Somos, aqui na parte superior utilizei a tag <video>, deixei com dois atributos, autoplay e loop, para assim que o usuario entrar na página o video começar a rodar e ficar se repetindo, não deixei a função control para não poluir a página visualmente falando. Aqui em baixo contei um pouco de onde surgiu a ideia do projeto e contextualizei o intuito do projeto para o usuário. 
+
+	Seguindo para a tela de Dicas, utilizei o mesmo conceito da tag video da página anterior e aqui em baixo falei um pouco sobre adoção responsável e contextualizei para o usuário a importância dos formulários do site.
+
+	Indo para a tela "Adote" criei um banner e aqui temos a tela onde o usuario poderá visualizar os gatos disponiveis para adoção e por meio deste formulário ele poderá colocar um gato para ser adotado.
+
+	Aqui temos o login e o cadastro (realizo um cadastro, faço login e preencho um formulário para upar um gato na tela de adote)
+
+	Explico o que acontece caso a pessoa clique para adotar um gato.
+
+	E caso o usuário clique no ícone do site ele será direcionado para uma tela onde eu mostro os meus 3 atuais gatinhos, Pandora, Fumaça e a Pandora, e o meu primeiro gato, o Shaollin, o motivo pelo qual eu me apaixonei por esses bichinhos peludos.
+
+- Ferramenta de gestão utilizada - Trello
+
+	*APRESENTO O TRELLO*
+
+- Modelagem
+	
+	*APRESENTO A MODELAGEM*
+
+- Qual foi a minha maior dificuldade
+
+	PARTE TÉCNICA CONCOMITANTEMENTE AO GERENCIAMENTO DO CURTO PERÍODO DE TEMPO
+
+- Maior superação
+
+	CONSEGUIR ENTREGAR O PROJETO NO PRAZO SOLICITADO E ME SENTIR BEM COM O 	RESULTADO FINAL, SUPERANDO AS MINHAS PRÓPRIAS EXPECTATIVAS
+
+- AGRADECIMENTO
+
+	
+- Conclusão
+
+	Tenho a intenção de prosseguir com este projeto, realizar implementações e atualizações, visando melhorar a medida com que vou evoluindo, tendo de maneira clara uma análise do meu progresso
