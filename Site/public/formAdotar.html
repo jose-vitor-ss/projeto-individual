@@ -16,11 +16,11 @@
     <header class="header">
         <div class="logo">
 
-            <a href="https://www.facebook.com/profile.php?id=61554143189765" target="_blank">
-                <img src="assets\facebook.png" width="50px" height="50">
-              </a>
-      
-          </div>
+            <a href="ondeTudoComecou.html">
+              <img src="assets\Cat icon.png" style="width:80px; height: 80px">
+            </a>
+
+        </div>
         <div class="containerOpções">
             <li>
                 <a class="a2" href="index.html">Home</a>
@@ -58,13 +58,13 @@
 
             <label for="cpf">CPF:</label>
             <br>
-            <input type="number" id="cpf" name="cpf" required>
+            <input type="text" id="cpf" name="cpf" required>
 
             <br><br>
 
             <label for="profissao">Profissão:</label>
             <br>
-            <input type="number" id="profissao" name="profissao" required>
+            <input type="text" id="profissao" name="profissao" required>
 
             <br><br>
 
@@ -98,9 +98,9 @@
 
             <br><br>
 
-            <label for="CEP">CEP:</label>
+            <label for="cep">CEP:</label>
             <br>
-            <input type="text" id="CEP" name="CEP">
+            <input type="text" id="cep" name="cep">
 
             <br><br>
 
@@ -131,8 +131,10 @@
                 <option value="apartamentoSemTela">Apartamento sem telas</option>
                 <option value="apartamentoCoberturaCtela">Apartamento tipo cobertura com telas</option>
                 <option value="apartamentoCoberturaStela">Apartamento tipo cobertura sem telas</option>
-                <option value="apartamentoTerreoCexterna">Apartamento no andar térreo com área externa (quintal)</option>
-                <option value="apartamentoTerreoSexterna">Apartamento no andar térreo sem área externa (quintal)</option>
+                <option value="apartamentoTerreoCexterna">Apartamento no andar térreo com área externa (quintal)
+                </option>
+                <option value="apartamentoTerreoSexterna">Apartamento no andar térreo sem área externa (quintal)
+                </option>
             </select>
 
             <br><br>
@@ -201,7 +203,7 @@
             <br><br>
             <div class="botaoFormAdotar">
 
-                <button class="botao" type="button" onclick="enviarFormulario()">Enviar</button>
+                <button class="botao" type="button" onclick="cadastrar()">Enviar</button>
 
             </div>
 
@@ -235,26 +237,140 @@
 
 </body>
 
+</html>
 <script>
-    function enviarFormulario() {
-        // Obter os dados do formulário
-        const formData = new FormData(document.getElementById('adotarForm'));
+    function listar() {
+        fetch("/gato/listar").then(function (resposta) {
 
-        // Simular o envio para um servidor fictício
-        fetch('https://jsonplaceholder.typicode.com/posts', {
-            method: 'POST',
-            body: formData
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Dados enviados com sucesso:', data);
-                // Adicione aqui lógica adicional após o envio bem-sucedido
-            })
-            .catch(error => {
-                console.error('Erro ao enviar dados:', error);
-                // Adicione aqui lógica de tratamento de erros
+            resposta.json().then(function (resposta) {
+                console.log("Dados recebidos: ", JSON.stringify(resposta));
             });
+
+        }).catch(function (resposta) {
+            console.error(resposta);
+        });
+    }
+
+    function cadastrar() {
+        // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+
+        var nomeCompletoVar = nomeCompleto.value;
+        var cpfVar = cpf.value;
+        var profissaoVar = profissao.value;
+        var jaTemGatoVar = temGato.value;
+        var enderecoVar = endereco.value;
+        var telefoneVar = telefone.value;
+        var idadeVar = idade.value;
+        var bairroVar = bairro.value;
+        var cepVar = cep.value;
+        var numeroAdultosVar = numeroAdultos.value;
+        var numeroCriancasVar = numeroCriancas.value;
+        var porqueAdotarVar = porqueAdotar.value;
+        var moraEmVar = moraEm.value;
+        var seCasaAlugadaVar = seCasaAlugada.value;
+        var teveGatosVar = teveGatos.value;
+        var seJaTeveVar = seJaTeve.value;
+        var asPessoasConcordamVar = asPessoasConcordam.value;
+        var alguemTemAlergiaVar = alguemTemAlergia.value;
+        var porqueDevolveriaVar = porqueDevolveria.value;
+        var responsabilidadeVar = responsabilidade.value;
+        var tireSuasDuvidasVar = tireSuasDuvidas.value;
+
+
+        if (
+            nomeCompletoVar == "" ||
+            cpfVar == "" ||
+            profissaoVar == "" ||
+            jaTemGatoVar == "" ||
+            enderecoVar == "" ||
+            telefoneVar == "" ||
+            idadeVar == "" ||
+            bairroVar == "" ||
+            cepVar == "" ||
+            numeroAdultosVar == "" ||
+            numeroCriancasVar == "" ||
+            porqueAdotarVar == "" ||
+            moraEmVar == "" ||
+            seCasaAlugadaVar == "" ||
+            teveGatosVar == "" ||
+            seJaTeveVar == "" ||
+            asPessoasConcordamVar == "" ||
+            alguemTemAlergiaVar == "" ||
+            porqueDevolveriaVar == "" ||
+            responsabilidadeVar == "" ||
+            tireSuasDuvidasVar == ""
+        ) {
+            // cardErro.style.display = "block";
+            // mensagem_erro.innerHTML =
+            //   "(Mensagem de erro para todos os campos em branco)";
+
+            //   finalizarAguardar();
+            return false;
+        }
+        // } else {
+        //   setInterval(sumirMensagem, 5000);
+        // }
+
+        // Enviando o valor da nova input
+        fetch("/formulario/cadastrarFormulario", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeCompletoServer: nomeCompletoVar,
+                cpfServer: cpfVar,
+                profissaoServer: profissaoVar,
+                jaTemGatoServer: jaTemGatoVar,
+                enderecoServer: enderecoVar,
+                telefoneServer: telefoneVar,
+                idadeServer: idadeVar,
+                bairroServer: bairroVar,
+                cepServer: cepVar,
+                numeroAdultosServer: numeroAdultosVar,
+                numeroCriancasServer: numeroCriancasVar,
+                porqueAdotarServer: porqueAdotarVar,
+                moraEmServer: moraEmVar,
+                seCasaAlugadaServer: seCasaAlugadaVar,
+                teveGatosServer: teveGatosVar,
+                seJaTeveServer: seJaTeveVar,
+                asPessoasConcordamServer: asPessoasConcordamVar,
+                alguemTemAlergiaServer: alguemTemAlergiaVar,
+                porqueDevolveriaServer: porqueDevolveriaVar,
+                responsabilidadeServer: responsabilidadeVar,
+                tireSuasDuvidasServer: tireSuasDuvidasVar
+
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    //   cardErro.style.display = "block";
+
+                    //   mensagem_erro.innerHTML =
+                    //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                    setTimeout(() => {
+                        window.location = "telaAdoção.html";
+                    }, "2000");
+
+                    // limparFormulario();
+                    // finalizarAguardar();
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                // finalizarAguardar();
+            });
+
+        return false;
     }
 </script>
-
-</html>

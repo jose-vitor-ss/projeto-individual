@@ -10,7 +10,9 @@ var app = express();
 
 var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
-var gatoRouter = require("./src/routes/gato")
+var gatoRouter = require("./src/routes/gato");
+var dashboardRouter = require("./src/routes/dashboard");
+var formularioRouter = require("./src/routes/formulario");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -20,6 +22,9 @@ app.use(cors());
 
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
+app.use("/gato", gatoRouter);
+app.use("/dashboard", dashboardRouter);
+app.use("/formulario", formularioRouter);
 
 app.listen(PORTA, function () {
     console.log(`Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar: http://localhost:${PORTA} \n

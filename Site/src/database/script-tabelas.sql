@@ -9,6 +9,7 @@ CREATE TABLE usuario (
 	cpf VARCHAR(50),
 	senha VARCHAR(50)
 );
+select * from formularioAdocao;
 
 CREATE TABLE formularioAdocao (
     idFormulario INT PRIMARY KEY AUTO_INCREMENT,
@@ -17,7 +18,7 @@ CREATE TABLE formularioAdocao (
     caractP VARCHAR(50),
     raca VARCHAR(25),
     cor VARCHAR(25),
-    possuiDoencas BOOLEAN,
+    possuiDoencas VARCHAR(3),
     quaisDoencas VARCHAR(100),
     vacinado VARCHAR(50),
     sexoGato VARCHAR(50),
@@ -32,6 +33,8 @@ CREATE TABLE formularioAdocao (
     email VARCHAR(50),
     termosCond LONGTEXT
 );
+
+select cor, count(cor) as quantidade from formularioAdocao group by cor order by quantidade;
 
 CREATE TABLE formularioAdotar (
 	idFormulario INT PRIMARY KEY AUTO_INCREMENT,
@@ -57,10 +60,7 @@ CREATE TABLE formularioAdotar (
     responsabilidade longtext,
     tireSuasDuvidas longtext
 );
-    
+
 select * from usuario;
-insert into empresa (razao_social) values ('Gatil - Felpudos');
-insert into gatil (descricao, fk_gatil) values ('Gatil - Consolação', 1);
 
-
- 
+select nomeGato, idadeGato, cor, sexoGato from formularioAdocao;

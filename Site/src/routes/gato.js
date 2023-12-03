@@ -5,10 +5,10 @@ var gatoController = require("../controllers/gatoController");
 
 router.post("/cadastrarGato", function (req, res) {
     gatoController.cadastrarGato(req, res);
-})
+});
 
-// router.get("/listar", function (req, res) {
-//     gatoController.listar(req, res);
-// });
+router.get("/listar", function (req, res) {
+    gatoController.listar(req, res);
+});
 
-module.export = router
+module.exports = router
