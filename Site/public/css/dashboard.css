@@ -1,10 +1,9 @@
 .container-dashboards {
     display: flex;
-    justify-content: space-between; /* Isso alinhará os itens à direita do contêiner pai */
+    justify-content: space-around; /* Isso alinhará os itens à direita do contêiner pai */
     padding: 10px; /* Adicione o espaçamento desejado se necessário */
     height: 100vh;
     width: 100%;
-    margin-left: 50%;
 }
 
 h1{

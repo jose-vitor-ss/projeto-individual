@@ -9,7 +9,6 @@ CREATE TABLE usuario (
 	cpf VARCHAR(50),
 	senha VARCHAR(50)
 );
-select * from formularioAdocao;
 
 CREATE TABLE formularioAdocao (
     idFormulario INT PRIMARY KEY AUTO_INCREMENT,

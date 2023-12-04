@@ -2,107 +2,163 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/profileTemplate.css">
-    <link rel="stylesheet" href="css/perfi.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/profileTemplate.css">
+  <link rel="stylesheet" href="css/perfi.css">
+  <title>Document</title>
 </head>
 
 <body>
 
-    <div class="containerTotal">
 
-        <div class="header2">
-            <div class="logo">
+  <div class="header2">
+    <div class="logo">
 
-                <a href="ondeTudoComecou.html">
-                    <img src="assets\Cat icon.png" style="width:80px; height: 80px">
-                </a>
-            </div>
-            <div class="containerOpções">
-                <li>
-                    <a class="a2" href="index.html">Home</a>
-                </li>
-                <li>
-                    <a class="a2" href="quemSomos.html">Quem Somos</a>
-                </li>
-                <li>
-                    <a class="a2" href="dicas.html">Dicas</a>
-                </li>
-            </div>
+      <a href="ondeTudoComecou.html">
+        <img src="assets\Cat icon.png" style="width:80px; height: 80px">
+      </a>
+    </div>
+    <div class="containerOpções">
+      <li>
+        <a class="a2" href="index.html">Home</a>
+      </li>
+      <li>
+        <a class="a2" href="quemSomos.html">Quem Somos</a>
+      </li>
+      <li>
+        <a class="a2" href="dicas.html">Dicas</a>
+      </li>
+    </div>
+  </div>
+  <div class="containerTotal" id="containerTotal2">
+
+    <div class="container-forms" id="container-forms2">
+      <div class="containerInfo" id="containerInfo2">
+
+        <div class="info">
+
+          <span>
+
+          </span>
+          <span>
+
+          </span>
+          <span>
+
+          </span>
+          <span>
+
+          </span>
+          </div>
+
         </div>
 
-        <div class="container-forms">
-            <h2>Suas informações</h2>
+      </div>
 
+    </div>
 
-           
+  <div class="aparecerBotao">
 
-        </div>
+    <div class="designbotao1">
+      <button id="aparecerButton">
+        <img src=assets/sidebar.png height="50px" width="50px">
+      </button>
+    </div>
 
+    <div id="myDiv" class="aparecer">
+      <div class="esconderBotao">
+        <header class="barra">
+          <div class="col-1">
 
-        <div class="aparecerBotao">
-
-            <div class="designbotao1">
-            <button id="aparecerButton"> 
-              <img src=assets/sidebar.png height="50px" width="50px"> 
-            </button>
-          </div>
-        
-            <div id="myDiv" class="aparecer">
-              <div class="esconderBotao">
-                <header class="barra">
-                  <div class="col-1">
-        
-                    <div class="designbotao2">
-                    <button id="esconderButton">
-                      <img src=assets/closesidebar.png height="30px" width="30px"> 
-                    </button>
-                  </div>
-        
-                    <div class="header-imagem">
-                      <img src="assets\catUser.png" alt="" class="img-usuario">
-                    </div>
-                    <button id="perfilId" class="btn cima" onclick="perfil()"><a href="./perfil.html">Perfil</a></button>
-                    <button id="dadosId" class="btn meio" onclick="dados()"><a href="./telaAdoção.html">Adote</a></button>
-                    <button id="dadosId" class="btn meio" onclick="dados()"><a
-                            href="./dashboard.html">Dashboard</a></button>
-                  </div>
-                  <div class="col-2">
-                    <button class="btn"><a href="./index.html">Sair</a><i class='bx bx-exit'></i></button>
-                  </div>
-              </div>
-              </header>
+            <div class="designbotao2">
+              <button id="esconderButton">
+                <img src=assets/closesidebar.png height="30px" width="30px">
+              </button>
             </div>
+
+            <div class="header-imagem">
+              <img src="assets\catUser.png" alt="" class="img-usuario">
+            </div>
+            <button id="perfilId" class="btn cima" onclick="perfil()"><a href="./perfil.html">Perfil</a></button>
+            <button id="dadosId" class="btn meio" onclick="dados()"><a href="./telaAdoção.html">Adote</a></button>
+            <button id="dadosId" class="btn meio" onclick="dados()"><a href="./dashboard.html">Dashboard</a></button>
           </div>
-        </body>
+          <div class="col-2">
+            <button class="btn"><a href="./index.html">Sair</a><i class='bx bx-exit'></i></button>
+          </div>
+      </div>
+      </header>
+    </div>
+  </div>
+</body>
 
 </html>
 
 <script>
-    function enviarFormulario() {
-        // Obter os dados do formulário
-        const formData = new FormData(document.getElementById('adotarForm'));
+  window.onload=upar()
+  function upar() {
+    fetch("/formulario/listar").then(function (resposta) {
+      if (resposta.ok) {
+        if (resposta.status == 204) {
+          var feed = document.getElementById("containerTotal2");
+          // var mensagem = document.createElement("span");
+          // mensagem.innerHTML = "Nenhum resultado encontrado."
+          // feed.appendChild(mensagem);
+          throw "Nenhum resultado encontrado!!";
+        }
 
-        // Simular o envio para um servidor fictício
-        fetch('https://jsonplaceholder.typicode.com/posts', {
-            method: 'POST',
-            body: formData
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Dados enviados com sucesso:', data);
-                // Adicione aqui lógica adicional após o envio bem-sucedido
-            })
-            .catch(error => {
-                console.error('Erro ao enviar dados:', error);
-                // Adicione aqui lógica de tratamento de erros
-            });
-    }
+        resposta.json().then(function (resposta) {
+          console.log("Dados recebidos: ", JSON.stringify(resposta));
 
-    document.addEventListener('DOMContentLoaded', function () {
+          var feed = document.getElementById("container-forms2");
+          feed.innerHTML = "";
+          for (let i = 0; i < resposta.length; i++) {
+            var upar = resposta[i];
+
+            // criando e manipulando elementos do HTML via JavaScript
+            var divcontainerTotal2 = document.createElement("div");
+            var divcontainerInfo2 = document.createElement("div");
+            var divinfo = document.createElement("div");
+            var spaninfo = document.createElement("span");
+            var spaninfo2 = document.createElement("span");
+            var spaninfo3 = document.createElement("span");
+            var spaninfo4 = document.createElement("span");
+            console.log(resposta)
+
+            spaninfo.innerHTML = `Nome completo: ${upar.nomeCompleto}`;
+            spaninfo2.innerHTML = `CPF: ${upar.CPF}`;
+            spaninfo3.innerHTML = `Profissão: ${upar.profissao}`;
+            spaninfo4.innerHTML = `CEP: ${upar.cep} <br><br><br> Caso haja mudança nas informações inseridas no seu formulário, entrar em contato com: adoteumfelpudo@gmail.com ou pelas redes sociais`;
+
+            divcontainerTotal2.className = "containerTotal"
+            divcontainerInfo2.className = "containerInfo"
+            divinfo.className = "info";
+            spaninfo.className = "span";
+            spaninfo2.className = "span";
+            spaninfo3.className = "span";
+            spaninfo4.className = "span";
+
+            divinfo.appendChild(spaninfo);
+            divinfo.appendChild(spaninfo2)
+            divinfo.appendChild(spaninfo3);
+            divinfo.appendChild(spaninfo4);
+            divcontainerInfo2.appendChild(divinfo);
+            divcontainerTotal2.appendChild(divcontainerInfo2);
+            feed.appendChild(divcontainerTotal2);
+
+          }
+        });
+      } else {
+        throw ('Houve um erro na API!');
+      }
+    }).catch(function (resposta) {
+      console.error(resposta);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
     var aparecerButton = document.getElementById('aparecerButton');
     var esconderButton = document.getElementById('esconderButton');
     var myDiv = document.getElementById('myDiv');
