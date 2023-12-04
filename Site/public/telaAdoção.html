@@ -5,6 +5,7 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
   <link href="css\telaAdoção.css" rel="stylesheet" />
   <link href="css\template.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/profileTemplate.css">
   <title>Document</title>
 </head>
 
@@ -16,7 +17,7 @@
       <a href="ondeTudoComecou.html">
         <img src="assets\Cat icon.png" style="width:80px; height: 80px">
       </a>
-      </div>
+    </div>
     <div class="containerOpções">
       <li>
         <a class="a2" href="index.html">Home</a>
@@ -27,9 +28,7 @@
       <li>
         <a class="a2" href="dicas.html">Dicas</a>
       </li>
-      <li>
-        <a class="a1" href="telaAdoção.html">Adote</a>
-      </li>
+  
       <div class="containerOpções2">
         <a class="a2" href="cadastro.html" style="color: #8F149A;">
           Cadastro
@@ -90,36 +89,46 @@
   </div>
   </div>
 
-  <footer>
-    <div class="container1">
-      <div class="containerItens">
-        <div class="imagens">
+  
+  <div class="aparecerBotao">
 
-          <a href="https://www.facebook.com/profile.php?id=61554143189765" target="_blank">
-            <img src="assets\facebook.png" width="50px" height="50">
-          </a>
+    <div class="designbotao1">
+    <button id="aparecerButton"> 
+      <img src=assets/sidebar.png height="50px" width="50px"> 
+    </button>
+  </div>
 
-          <a href="https://www.instagram.com/adoteumfelpudo/" target="_blank">
-            <img src="assets\Instagram.png" width="50px" height="50">
-          </a>
+    <div id="myDiv" class="aparecer">
+      <div class="esconderBotao">
+        <header class="barra">
+          <div class="col-1">
 
-          <a href="https://twitter.com/adoteumfelpudo" target="_blank">
-            <img src="assets\Twitter.png" width="50px" height="50">
-          </a>
+            <div class="designbotao2">
+            <button id="esconderButton">
+              <img src=assets/closesidebar.png height="30px" width="30px"> 
+            </button>
+          </div>
 
-        </div>
-        <div>
-          <b>Fale conosco: AdoteUmFelpudo@gmail.com</b>
-        </div>
+            <div class="header-imagem">
+              <img src="assets\catUser.png" alt="" class="img-usuario">
+            </div>
+            <button id="perfilId" class="btn cima" onclick="perfil()"><a href="./perfil.html">Perfil</a></button>
+            <button id="dadosId" class="btn meio" onclick="dados()"><a href="./telaAdoção.html">Adote</a></button>
+            <button id="dadosId" class="btn meio" onclick="dados()"><a
+                    href="./dashboard.html">Dashboard</a></button>
+          </div>
+          <div class="col-2">
+            <button class="btn"><a href="./index.html">Sair</a><i class='bx bx-exit'></i></button>
+          </div>
       </div>
-  </footer>
-
+      </header>
+    </div>
+  </div>
 </body>
 
 </html>
 <script>
 
-  window.onload = upar()
   function upar() {
     fetch("/gato/listar").then(function (resposta) {
       if (resposta.ok) {
@@ -152,7 +161,7 @@
             spannomeGato.innerHTML = upar.nomeGato;
             spantextoCaracterística.innerHTML = upar.caractP;
 
-            
+
             divcontainerCaixa.className = "containerCaixas"
             divCaixa.className = "caixa";
             divbackgroundFoto.className = "background-foto";
@@ -163,7 +172,7 @@
             spantextoCaracterística.className = "texto-característica";
 
             divbackgroundFoto.addEventListener('click', function () {
-              abrir2();; 
+              abrir2();;
             });
 
             divCaixa.appendChild(divbackgroundFoto);
@@ -212,5 +221,22 @@
   //   .catch(function (resposta) { // funçao para tratamento de erros
   //     console.log(`#ERRO: ${resposta}`);// mostrando o erro para o usuario
   //   });
+
+ 
+  document.addEventListener('DOMContentLoaded', function () {
+    var aparecerButton = document.getElementById('aparecerButton');
+    var esconderButton = document.getElementById('esconderButton');
+    var myDiv = document.getElementById('myDiv');
+
+    aparecerButton.addEventListener('click', function () {
+      myDiv.classList.remove('esconder');
+      myDiv.classList.add('aparecer');
+    });
+
+    esconderButton.addEventListener('click', function () {
+      myDiv.classList.remove('aparecer');
+      myDiv.classList.add('esconder');
+    });
+  });
 
 </script>

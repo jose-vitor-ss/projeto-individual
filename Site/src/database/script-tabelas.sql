@@ -64,3 +64,7 @@ CREATE TABLE formularioAdotar (
 select * from usuario;
 
 select nomeGato, idadeGato, cor, sexoGato from formularioAdocao;
+
+select * from formularioAdotar;
+
+select * from formularioAdocao;

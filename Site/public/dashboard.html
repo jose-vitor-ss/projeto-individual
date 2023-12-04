@@ -28,24 +28,7 @@
                 <a href="ondeTudoComecou.html">
                     <img src="assets\Cat icon.png" style="width:80px; height: 80px">
                 </a>
-
-                <div class="titulo">
-                    <h1>Dashboard</h1>
-                </div>
-
-                <div class="container-dashboards">
-
-                    <div>
-                        <canvas id="myChart" style="position: relative; height:40vh; width:30vw"></canvas>
-                    </div>
-                    
-                    <div>
-                        <canvas id="myChart2" style="position: relative; height:40vh; width:30vw"></canvas>
-                    </div>
-
-                </div>
             </div>
-
             <div class="containerOpções">
                 <li>
                     <a class="a2" href="index.html">Home</a>
@@ -56,35 +39,66 @@
                 <li>
                     <a class="a2" href="dicas.html">Dicas</a>
                 </li>
-                <li>
-                    <a class="a2" href="telaAdoção.html">Adote</a>
-                </li>
             </div>
         </div>
 
+        <div class="titulo">
+            <h1>Dashboard</h1>
+        </div>
 
-        <header class="barra">
-            <div class="col-1">
-                <div class="header-imagem">
-                    <img src="assets\catUser.png" alt="" class="img-usuario">
-                </div>
-                <button id="perfilId" class="btn cima" onclick="perfil()"><a href="./perfil.html">Perfil</a></button>
-                <button id="dadosId" class="btn meio" onclick="dados()"><a href="./meusGatosParaAdoção.html">Meus gatos
-                        para adoção</a></button>
-                <button id="dadosId" class="btn meio" onclick="dados()"><a
-                        href="./dashboard.html">Dashboard</a></button>
-            </div>
-            <div class="col-2">
-                <button class="btn"><a href="./index.html">Sair</a><i class='bx bx-exit'></i></button>
+        <div class="container-dashboards">
+
+            <div>
+                <canvas id="myChart" style="position: relative; height:40vh; width:30vw"></canvas>
             </div>
 
-        </header>
-
-
-
+            <div>
+                <canvas id="myChart2" style="position: relative; height:40vh; width:30vw"></canvas>
+            </div>
+        </div>
+    </div>
     </div>
 
 
+
+
+
+    <div class="aparecerBotao">
+
+        <div class="designbotao1">
+            <button id="aparecerButton">
+                <img src=assets/sidebar.png height="50px" width="50px">
+            </button>
+        </div>
+
+        <div id="myDiv" class="aparecer">
+            <div class="esconderBotao">
+                <header class="barra">
+                    <div class="col-1">
+
+                        <div class="designbotao2">
+                            <button id="esconderButton">
+                                <img src=assets/closesidebar.png height="30px" width="30px">
+                            </button>
+                        </div>
+
+                        <div class="header-imagem">
+                            <img src="assets\catUser.png" alt="" class="img-usuario">
+                        </div>
+                        <button id="perfilId" class="btn cima" onclick="perfil()"><a
+                                href="./perfil.html">Perfil</a></button>
+                        <button id="dadosId" class="btn meio" onclick="dados()"><a
+                                href="./telaAdoção.html">Adote</a></button>
+                        <button id="dadosId" class="btn meio" onclick="dados()"><a
+                                href="./dashboard.html">Dashboard</a></button>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn"><a href="./index.html">Sair</a><i class='bx bx-exit'></i></button>
+                    </div>
+            </div>
+            </header>
+        </div>
+    </div>
 </body>
 
 </html>
@@ -336,4 +350,19 @@
         );
     }
 
+    document.addEventListener('DOMContentLoaded', function () {
+        var aparecerButton = document.getElementById('aparecerButton');
+        var esconderButton = document.getElementById('esconderButton');
+        var myDiv = document.getElementById('myDiv');
+
+        aparecerButton.addEventListener('click', function () {
+            myDiv.classList.remove('esconder');
+            myDiv.classList.add('aparecer');
+        });
+
+        esconderButton.addEventListener('click', function () {
+            myDiv.classList.remove('aparecer');
+            myDiv.classList.add('esconder');
+        });
+    });
 </script>

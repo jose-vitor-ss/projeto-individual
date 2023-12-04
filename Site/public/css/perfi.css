@@ -1,9 +1,15 @@
 .container-forms {
     width: 80%;
-    margin-left: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
+    background-color: #8F3AA2; /* Cor mais clara de roxo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 40px;
 }
